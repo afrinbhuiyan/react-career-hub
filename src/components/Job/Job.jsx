@@ -2,9 +2,10 @@
 import './Job.css'
 import { TfiLocationPin } from "react-icons/tfi";
 import { PiCurrencyCircleDollar } from "react-icons/pi";
+import { Link } from 'react-router-dom';
 const Job = ({ job }) => {
     const { logo, job_title, company_name, remote_or_onsite, location,
-        job_type, salary} = job;
+        job_type, salary, id} = job;
     return (
         <div className="bg-base-100 border rounded-lg shadow-xl">
             <figure className="px-10 pt-10">
@@ -26,7 +27,11 @@ const Job = ({ job }) => {
                     <h3 className='flex items-center font-semibold text-[#111111b9] ' ><PiCurrencyCircleDollar /> {salary} </h3>
                 </div>
                 <div className="card-actions">
-                    <button className="btn font-bold text-white bg-gradient-to-r from-sky-500 to-[#9245f7b9]">View Details</button>
+                    <Link to={`/job/${id}`} >
+                    <button className="btn font-bold text-white
+                    bg-gradient-to-r from-sky-500 to-[#9245f7b9]"
+                    >View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
