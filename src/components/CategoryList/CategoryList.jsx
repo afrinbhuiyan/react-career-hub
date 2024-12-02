@@ -14,7 +14,7 @@ const CategoryList = () => {
 
     return (
         <div>
-            <h2 className="text-4xl text-center font-bold mt-20">Jobs Category List</h2>
+            <h2 className="text-4xl text-center font-bold mt-20 mb-3">Jobs Category List</h2>
             <p className="text-center text-[#11111196] ">Explore thousands of job opportunities with all the information you need. Its your future</p>
              <div className="flex justify-between">
                 {

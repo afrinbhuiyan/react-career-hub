@@ -22,7 +22,10 @@ const JobDetails = () => {
 
     return (
         <div>
-            <h2>Job Details {id} </h2>
+            <div className="flex mt-10 mb-20">
+                <img src="https://i.ibb.co.com/7CJwbbw/bg1.png" alt="" />
+                <h2 className="flex justify-center items-center text-center text-2xl font-bold ml-40" >Job Details</h2>
+            </div>
             <div className="grid gap-5 md:grid-cols-4">
                 <div className="md:col-span-3">
                     <p className="mb-3" ><span className="font-bold">Job Discription:</span> {job.job_description} </p>

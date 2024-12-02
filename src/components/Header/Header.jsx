@@ -1,15 +1,20 @@
 import { NavLink } from "react-router-dom";
+import './Header.css'
 
 const Header = () => {
     const links = <>
-    <li><NavLink to="/" >Home</NavLink></li>
+    <li><NavLink to="/"
+    className={({ isActive }) =>
+         isActive ? "active" : "bg-gradient-to-r from-sky-500 to-[#9245f7b9] text-white hover:shadow-[#9245f7b9] hover:shadow-2xl "
+    }
+    >Home</NavLink></li>
     <li><NavLink to="/jobs" >Jobs</NavLink></li>
     <li><NavLink to="/statistics" >Statistics</NavLink></li>
     <li><NavLink to="/applied" >Applied Jobs</NavLink></li>
     <li><NavLink to="/blogs" >Blogs</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar mt-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +45,12 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn font-bold text-white bg-gradient-to-r from-sky-500 to-[#9245f7b9]">Star Applying</a>
+                <a className="btn font-bold text-white bg-gradient-to-r from-sky-500 to-[#9245f7b9]
+                hover:shadow-[#9245f7b9] hover:shadow-2xl
+                ">Star Applying</a>
+            </div>
+            <div >
+            <img className="absolute" src="https://i.ibb.co.com/x61HhjV/bg2.png" alt="" />
             </div>
         </div>
     );

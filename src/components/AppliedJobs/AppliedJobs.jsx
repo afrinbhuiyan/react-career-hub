@@ -42,10 +42,13 @@ const AppliedJobs = () => {
     }, [jobs])
     return (
         <div>
-            <h2 className=" text-center text-3xl font-bold" >Applied Jobs: {appliedJobs.length} </h2>
+            <div className="flex mt-10 mb-20">
+                <img src="https://i.ibb.co.com/7CJwbbw/bg1.png" alt="" />
+                <h2 className="flex justify-center items-center text-center text-2xl font-bold ml-40" >Applied Jobs: {appliedJobs.length} </h2>
+            </div>
             <details class="dropdown flex justify-end">
                 <summary class="btn m-1">Filter By <PiGreaterThan></PiGreaterThan> </summary>
-                <ul tabIndex={0} className="dropdown-content menu  bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <ul tabIndex={0} className="dropdown-content menu  bg-[#dd8ff01e] rounded-box z-[1] w-52 p-2 shadow-xl">
                     <li onClick={() => handleJobsFilter('all')} ><a>All</a></li>
                     <li onClick={() => handleJobsFilter('remote')} ><a>Remote</a></li>
                     <li onClick={() => handleJobsFilter('onsite')} ><a>Onsite</a></li>

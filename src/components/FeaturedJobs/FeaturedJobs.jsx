@@ -29,7 +29,9 @@ const FeaturedJobs = () => {
             {/* <div className="flex justify-center my-10"> */}
             <button onClick={() => setDataLength(jobs.length) }
             className="btn font-bold text-white 
-            bg-gradient-to-r from-sky-500 to-[#9245f7b9]"
+            bg-gradient-to-r from-sky-500 to-[#9245f7b9]
+            hover:shadow-xl hover:shadow-[#48335cfd]
+            hover:bg-[#3f1010]"
             >See All Jobs</button>
             </div>
             {/* </div> */}
